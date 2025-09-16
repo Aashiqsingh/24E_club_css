@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .box{
+        height: 300px;
+        width: 300px;
+        border: 1px solid black;
+
+
+        background-image: url('https://cdn11.bigcommerce.com/s-x49po/images/stencil/1500x1500/products/92180/248022/legacy_products%2FART_1038_73882__07265.1735368113.jpg?c=2');
+        background-size: cover;
+    }
+    .box::before{
+        content: '';
+        position: absolute;
+        height: 300px;
+        width: 300px;
+        background-color: rgba(255, 68, 0, 0.865);
+
+        transition: 1s;
+    }
+    .box::after{
+        content: '';
+        position: absolute;
+        height: 300px;
+        width: 300px;
+        background-color: rgba(0, 0, 0, 0.776);
+        /* left: 158px; */
+        right: 972px;
+
+        transition: 1s;
+    }
+    .box:hover::before{
+        width: 0;
+
+        transition: 1s;
+    }
+    .box:hover::after{
+        width: 0;
+
+        transition: 1s;
+    }
+</style>
+<body>
+
+    <div class="box">
+
+    </div>
+    
+</body>
+</html>
